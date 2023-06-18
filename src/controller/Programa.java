@@ -1,4 +1,6 @@
+
 package controller;
+import viewer.JanelaPrincipal;
 
 public class Programa {
 
@@ -7,7 +9,9 @@ public class Programa {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub]
+		JanelaPrincipal janela = new JanelaPrincipal ();
+		janela.setVisible(true);
 
 	}
 
