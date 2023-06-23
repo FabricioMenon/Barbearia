@@ -1,14 +1,15 @@
 package model;
-
+import java.awt.event.ActionListener;
 public class Cliente {
 	private String nome;
-	private int telefone;
+	private String telefone;
+	private String cpf;
 
 
 	public Cliente() {
 	}
 
-	public Cliente (String nome, int telefone) {
+	public Cliente (String nome, String telefone) {
 		this.setNome(nome);
 		this.setTelefone(telefone);
 		
@@ -24,12 +25,20 @@ public class Cliente {
 		this.nome = nome;
 	}
 
-	public int getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(int telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 	
 }
