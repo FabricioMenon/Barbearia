@@ -9,4 +9,14 @@ public class Barbeiro {
 		// TODO Auto-generated constructor stub
 	}
 
+
+	public String getNomeBar() {
+		return nomeBar;
+	}
+
+
+	public void setNomeBar(String nomeBar) {
+		this.nomeBar = nomeBar;
+	}
+
 }
