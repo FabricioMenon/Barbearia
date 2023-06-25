@@ -70,21 +70,6 @@ public class JanelaCliente extends JFrame {
 		contentPane.add(tftel);
 		tftel.setColumns(10);
 		
-		JButton btnCancelarcli = new JButton("Cancelar");
-		btnCancelarcli.setBounds(18, 158, 117, 29);
-		contentPane.add(btnCancelarcli);
-		
-		JButton btnSalvarcli = new JButton("Salvar");
-		btnSalvarcli.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {}
-		 	String nome = tfNome.getText();
-			String cpf = tfCpf.getText();
-			String telefone = tftel.getText();
-								
-		});
-		btnSalvarcli.setBounds(145, 158, 117, 29);
-		contentPane.add(btnSalvarcli);
-			
 		JLabel lblNewLabel_2 = new JLabel("Idade:");
 		lblNewLabel_2.setBounds(21, 99, 61, 16);
 		contentPane.add(lblNewLabel_2);
@@ -108,7 +93,27 @@ public class JanelaCliente extends JFrame {
 		comboBox.addItem("4");
 		comboBox.addItem("5");
 		comboBox.addItem("100");
-	}
+	
+		
+		JButton btnCancelarcli = new JButton("Cancelar");
+		btnCancelarcli.setBounds(18, 158, 117, 29);
+		contentPane.add(btnCancelarcli);
+		
+		JButton btnSalvarcli = new JButton("Salvar");
+		btnSalvarcli.addActionListener(new ActionListener( ) {
+			public void actionPerformed(ActionEvent e) {}
+		 	@SuppressWarnings("unused")
+			String nome = tfNome.getText();
+			@SuppressWarnings("unused")
+			String cpf = tfCpf.getText();
+			@SuppressWarnings("unused")
+			String telefone = tftel.getText();
+								
+		});
+		btnSalvarcli.setBounds(145, 158, 117, 29);
+		contentPane.add(btnSalvarcli);
+			
+}
 
 	private JComboBox<String> extracted() {
 		return new JComboBox<String>();

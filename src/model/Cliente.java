@@ -1,14 +1,17 @@
 package model;
-import java.awt.event.ActionListener;
+
 public class Cliente {
 	private String nome;
 	private String telefone;
 	private String cpf;
 
-
-	public Cliente() {
+public Cliente(String nome, String telefone, String cpf) {
+		super();
+		this.nome = nome;
+		this.telefone = telefone;
+		this.cpf = cpf;
 	}
-
+	
 	public Cliente (String nome, String telefone) {
 		this.setNome(nome);
 		this.setTelefone(telefone);
