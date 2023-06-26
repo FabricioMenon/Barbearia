@@ -1,5 +1,7 @@
 package model;
 
+// okokok
+///efwrfafarefq
 public class Cliente {
 
 	final public static int TAM_MIN_NOME = 3;
