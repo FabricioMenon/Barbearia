@@ -27,7 +27,8 @@ public class JanelaCliente extends JFrame {
 	private JTextField tfCpf;
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;
-	private JTextField textField;
+	private JLabel lblNewLabel_2;
+	private JTextField txtDigiteOSeu;
 
 	/**
 	 * Launch the application.
@@ -62,12 +63,12 @@ public class JanelaCliente extends JFrame {
 
 		tfNome = new JTextField();
 		tfNome.setForeground(Color.GRAY);
-		tfNome.setText("Digite o seu nome aqui");
+		tfNome.setText("Digite o nome aqui");
 
 		tfNome.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if (tfNome.getText().equals("Digite o seu nome aqui")) {
+				if (tfNome.getText().equals("Digite o nome aqui")) {
 					tfNome.setText("");
 					tfNome.setForeground(Color.BLACK);
 				}
@@ -77,12 +78,12 @@ public class JanelaCliente extends JFrame {
 			public void focusLost(FocusEvent e) {
 				if (tfNome.getText().isEmpty()) {
 					tfNome.setForeground(Color.GRAY);
-					tfNome.setText("Digite o seu nome aqui");
+					tfNome.setText("Digite o nome aqui");
 				}
 			}
 		});
 
-		tfNome.setBounds(93, 69, 130, 26);
+		tfNome.setBounds(102, 14, 130, 26);
 		contentPane.add(tfNome);
 		tfNome.setColumns(10);
 
@@ -93,7 +94,7 @@ public class JanelaCliente extends JFrame {
 					return;
 				tfNome.setBackground(Color.WHITE);
 				String nome = tfNome.getText();
-				if (nome.equals("Digite o seu nome aqui"))
+				if (nome.equals("Digite o nome aqui"))
 					return;
 				try {
 					Cliente.validarNome(nome);
@@ -151,15 +152,49 @@ public class JanelaCliente extends JFrame {
 
 
 // cpf area
-		JLabel lblNewLabel_3 = new JLabel("CPF:");
-		lblNewLabel_3.setBounds(18, 52, 61, 16);
-		contentPane.add(lblNewLabel_3);
-
 		tfCpf = new JTextField();
-		tfCpf.setColumns(10);
-		tfCpf.setBounds(102, 47, 130, 26);
+		tfCpf.setForeground(Color.GRAY);
+		tfCpf.setText("Digite o cpf aqui");
+
+		tfCpf.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusGained(FocusEvent e) {
+				if (tfCpf.getText().equals("Digite o cpf aqui")) {
+					tfCpf.setText("");
+					tfCpf.setForeground(Color.BLACK);
+				}
+			}
+
+			@Override
+			public void focusLost(FocusEvent e) {
+				if (tfCpf.getText().isEmpty()) {
+					tfCpf.setForeground(Color.GRAY);
+					tfCpf.setText("Digite o cpf aqui");
+				}
+			}
+		});
+
+		tfCpf.setBounds(102, 53, 130, 26);
 		contentPane.add(tfCpf);
 		tfCpf.setColumns(10);
+
+		tfCpf.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				if (!isVisible())
+					return;
+				tfCpf.setBackground(Color.WHITE);
+				String cpf = tfCpf.getText();
+				if (cpf.equals("Digite o cpf aqui"))
+					return;
+				try {
+					Cliente.validarCpf(cpf);
+				} catch (ModelException e1) {
+					JOptionPane.showMessageDialog(lblNewLabel, "Erro: " + e1);
+					tfCpf.requestFocus();
+				}
+			}
+		});
 
 
 		JButton btnCancelarcli = new JButton("Cancelar");
@@ -188,10 +223,12 @@ public class JanelaCliente extends JFrame {
 		lblNewLabel_1.setBounds(18, 14, 61, 16);
 		contentPane.add(lblNewLabel_1);
 
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(102, 9, 130, 26);
-		contentPane.add(textField);
+		lblNewLabel_2 = new JLabel("CPF:");
+		lblNewLabel_2.setBounds(18, 58, 46, 14);
+		contentPane.add(lblNewLabel_2);
+
+
+
 
 	}
 
