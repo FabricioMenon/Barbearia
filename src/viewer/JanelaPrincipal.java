@@ -1,4 +1,4 @@
-package viwer;
+package viewer;
 
 import java.awt.EventQueue;
 
