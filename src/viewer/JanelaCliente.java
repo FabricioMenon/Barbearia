@@ -202,15 +202,12 @@ public class JanelaCliente extends JFrame {
 		contentPane.add(btnCancelarcli);
 
 		JButton btnSalvarcli = new JButton("Salvar");
-		btnSalvarcli.addActionListener(new ActionListener( ) {
-			public void actionPerformed(ActionEvent e) {}
-			@SuppressWarnings("unused")
-			String nome = tfNome.getText();
-			@SuppressWarnings("unused")
-			String cpf = tfCpf.getText();
-			@SuppressWarnings("unused")
-			String telefone = tfTelefone.getText();
-
+		btnSalvarcli.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String nome = tfNome.getText();
+				String cpf = tfCpf.getText();
+				String telefone = tfTelefone.getText();
+			}
 		});
 		btnSalvarcli.setBounds(145, 158, 117, 29);
 		contentPane.add(btnSalvarcli);
