@@ -7,7 +7,10 @@ public class Barbeiro {
 	
 	
 	private String nomeBar;
-
+	/**
+	 * @param nomeBar= a
+	 * @param cpfBar
+	 */
 	public Barbeiro(String nomeBar, String cpfBar) {
 		super();
 		this.nomeBar = nomeBar;

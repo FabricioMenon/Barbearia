@@ -89,7 +89,7 @@ public class JanelaCliente extends JFrame {
 		comboBox.setBounds(87, 95, 64, 26);
 		contentPane.add(comboBox);
 		
-		comboBox.addItem(" ");
+		
 		comboBox.addItem("4");
 		comboBox.addItem("5");
 		comboBox.addItem("100");
@@ -109,31 +109,13 @@ public class JanelaCliente extends JFrame {
 			@SuppressWarnings("unused")
 			String telefone = tftel.getText();
 								
-			try {
-				idade = Integer.parseInt(aux);
-			} catch (NumberFormatException e1) {
-				JOptionPane.showMessageDialog(btnSalvarcli, "O campo idade deve conter um número!");
-				return;
-			}
-							
-			try {
-				Cliente p = new Clinete(cpf, nome, telefone);
-				JOptionPane.showMessageDialog(btnSalvarcli, "Deu Bom!!! " + p );
-			} catch (Exception e1) {
-				JOptionPane.showMessageDialog(btnSalvarcli, e1.getMessage() );
-			}
-		}
-	});
-
-	
+		});
 		btnSalvarcli.setBounds(145, 158, 117, 29);
 		contentPane.add(btnSalvarcli);
 			
-
+}
 
 	private JComboBox<String> extracted() {
 		return new JComboBox<String>();
 	}
-
-}
 }
