@@ -1,4 +1,4 @@
-package viewer;
+	package viewer;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -28,7 +28,7 @@ public class JanelaCliente extends JFrame {
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;
 	private JLabel lblNewLabel_2;
-	private JTextField txtDigiteOSeu;
+
 
 	/**
 	 * Launch the application.
