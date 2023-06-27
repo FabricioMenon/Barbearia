@@ -56,11 +56,20 @@ public class JanelaAgendamento extends JFrame {
 		comboBox_1.setBounds(66, 76, 141, 22);
 		contentPane.add(comboBox_1);
 
-		JComboBox comboBox_1_1 = new JComboBox();
-		comboBox_1_1.setBounds(66, 129, 141, 22);
-		contentPane.add(comboBox_1_1);
+		JComboBox<String> comboBox = new JComboBox<String>();
+		comboBox.setBounds(147, 87, 117, 27);
+		contentPane.add(comboBox);
 
-		JLabel lblData = new JLabel("Data");
+		comboBox.addItem("Segunda-feira");
+		comboBox.addItem("Terça-feira");
+		comboBox.addItem("Quarta-feira");
+		comboBox.addItem("Quinta-feira");
+		comboBox.addItem("Sexta-feira");
+		comboBox.addItem("Sábado");
+
+
+
+		JLabel lblData = new JLabel("Dia Disponivel:");
 		lblData.setBounds(10, 133, 46, 14);
 		contentPane.add(lblData);
 

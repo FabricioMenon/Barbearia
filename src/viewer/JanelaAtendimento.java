@@ -50,6 +50,7 @@ public class JanelaAtendimento extends JFrame {
         lblNewLabel.setBounds(45, 37, 61, 16);
         contentPane.add(lblNewLabel);
 
+
         JComboBox comboBoxAtCli = new JComboBox();
         comboBoxAtCli.setBounds(118, 33, 147, 27);
         contentPane.add(comboBoxAtCli);
@@ -67,21 +68,28 @@ public class JanelaAtendimento extends JFrame {
         contentPane.add(lblNewLabel_1);
 
         tfValor = new JTextField();
-        tfValor.setText("R$:");
-        tfValor.setToolTipText("R$");
+        tfValor.setText("");
+        tfValor.setToolTipText("");
         tfValor.setBounds(118, 111, 76, 26);
         contentPane.add(tfValor);
         tfValor.setColumns(10);
 
-        JLabel lblNewLabel_2 = new JLabel("Data");
+        JLabel lblNewLabel_2 = new JLabel("Dia Disponivel:");
         lblNewLabel_2.setBounds(45, 154, 61, 16);
         contentPane.add(lblNewLabel_2);
 
-        tfData = new JTextField();
-        tfData.setText("XX/XX/XX");
-        tfData.setBounds(118, 149, 76, 26);
-        contentPane.add(tfData);
-        tfData.setColumns(10);
+        JComboBox<String> comboBox = new JComboBox<String>();
+        comboBox.setBounds(147, 87, 117, 27);
+        contentPane.add(comboBox);
+
+        comboBox.addItem("Segunda-feira");
+        comboBox.addItem("Terça-feira");
+        comboBox.addItem("Quarta-feira");
+        comboBox.addItem("Quinta-feira");
+        comboBox.addItem("Sexta-feira");
+        comboBox.addItem("Sábado");
+
+
 
         JButton btCancelar = new JButton("Cancelar ");
         btCancelar.setBounds(18, 218, 117, 29);
