@@ -78,11 +78,11 @@ public class Cliente {
 					break;
 				case 11:
 					if(c != '-')
-						throw new ModelException("Na posição " + i + " deve aparecer um '-' no cpf!");;
+						throw new ModelException("Na posição " + i + " deve aparecer um '-' no cpf!");
 					break;
 				default:
 					if(!Character.isDigit(c))
-						throw new ModelException("Na posição " + i + " deve aparecer dígito !");;
+						throw new ModelException("Na posição " + i + " deve aparecer dígito !");
 			}
 		}
 	}
